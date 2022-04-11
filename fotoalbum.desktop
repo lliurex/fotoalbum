@@ -1,0 +1,58 @@
+[Desktop Entry]
+Type=Service
+MimeType=image/png;image/jpeg;image/gif;
+X-KDE-Submenu=Fotoalbum
+X-KDE-Submenu[ca]=Fotoalbum
+X-KDE-MinNumbersOfUrls=1
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+Actions=1x1,2x1,2x2,2x3,3x5,minilibro,puzzle
+
+[Desktop Action 1x1]
+Name=1x1 + Título
+Name[es]=1x1 + Título
+Name[ca]=1x1 + Títol
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m 1x1 %U;
+
+[Desktop Action 2x1]
+Name=2x1 + Lineas
+Name[es]=2x1 + Lineas
+Name[ca]=2x1 + Línies
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m 2x1 %U;
+
+[Desktop Action 2x2]
+Name=2x2 + Lineas
+Name[es]=2x2 + Lineas
+Name[ca]=2x2 + Línies
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m 2x2 %U;
+
+[Desktop Action 2x3]
+Name=2x3 + Lineas
+Name[es]=2x3 + Linea
+Name[ca]=2x3 + Línia
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m 2x3 %U;
+
+[Desktop Action 3x5]
+Name=3x5
+Name[es]=3x5
+Name[ca]=3x5
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m 3x5 %U;
+
+[Desktop Action minilibro]
+Name=Minilibro plegable 8 páginas
+Name[es]=Minilibro plegable 8 páginas
+Name[ca]=Minillibre plegable 8 pàgines
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m minilibro %U;
+
+[Desktop Action puzzle]
+Name=Puzle
+Name[es]=Puzle
+Name[ca]=Puzle
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m puzzle %U;
+

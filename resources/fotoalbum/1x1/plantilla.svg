@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1122.5197"
+   height="793.70081"
+   id="svg2"
+   version="1.1"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="plantilla.svg"
+   viewBox="0 0 1052.3622 744.09448"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.41053452"
+     inkscape:cx="-238.71318"
+     inkscape:cy="503.00277"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="3440"
+     inkscape:window-height="1243"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <g
+       id="g3797"
+       transform="matrix(1.0343678,0,0,1,-20.643536,0)">
+      <rect
+         rx="34.583431"
+         y="325.29709"
+         x="34.589142"
+         height="124.59821"
+         width="990.63953"
+         id="rect3771"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.26497;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         ry="29.230183" />
+    </g>
+    <image
+       xlink:href="1"
+       width="972"
+       height="549"
+       id="image3865"
+       x="39.980515"
+       y="478.46536" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2999"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion3001"
+         style="font-family:sans-serif"><rect
+           id="rect3003"
+           width="984.08289"
+           height="94.9981"
+           x="34.101883"
+           y="32.826645"
+           style="font-size:100px" /></flowRegion><flowPara
+         id="flowPara3005"
+         style="font-size:100px;line-height:1.25;font-family:sans-serif"> </flowPara></flowRoot>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.9375"
+       x="535.51599"
+       y="328.12872"
+       id="text30912"><tspan
+         sodipodi:role="line"
+         id="tspan30910"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="535.51599"
+         y="328.12872">                                                                </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="535.51599"
+         y="409.37872"
+         id="tspan35066">@@MMMM@@</tspan></text>
+  </g>
+</svg>
