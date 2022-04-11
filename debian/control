@@ -8,7 +8,7 @@ Homepage: https://github.com/lliurex/fotoalbum
 
 Package: fotoalbum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, librsvg2-bin, python3, imagemagick-6.q16
+Depends: ${shlibs:Depends}, ${misc:Depends}, librsvg2-bin, python3, imagemagick-6.q16, inkscape-extension-lasercut-jigsaw
 Description: Make pdf framed with decorations
  Make custom pdf with custom bookmarks intended for use in school
 
@@ -18,3 +18,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, fotoalbum
 Description: Dolphin service menu for fotoalbum
  Service menu with pdf framed decoration actions
 
+Package: inkscape-extension-lasercut-jigsaw
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3
+Description: Make jigsaw from svg file
+ Inkscape extension for make jigsaw from a image on svg file
