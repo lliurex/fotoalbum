@@ -18,7 +18,51 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
-     id="defs4" />
+     id="defs4">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern2950"
+       id="pattern1922"
+       patternTransform="matrix(0.92355587,0,0,1.0151865,72.821337,555.82182)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern1835"
+       id="pattern1840"
+       patternTransform="matrix(0.9176052,0,0,1.0163733,73.472686,25.344193)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern2950"
+       id="pattern2957"
+       patternTransform="matrix(0.92355587,0,0,1.0151865,72.821337,555.82182)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="654.36621"
+       height="369.69261"
+       patternTransform="translate(71.597461,605.24336)"
+       id="pattern2950">
+      <image
+         xlink:href="2"
+         width="654.36621"
+         height="369.6926"
+         id="image3876"
+         x="0"
+         y="0" />
+    </pattern>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="660.98066"
+       height="373.35247"
+       patternTransform="translate(70.379191,38.937768)"
+       id="pattern1835">
+      <image
+         xlink:href="1"
+         width="660.98065"
+         height="373.35248"
+         id="image3865"
+         x="0"
+         y="0" />
+    </pattern>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -26,9 +70,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.41053452"
-     inkscape:cx="135.18961"
-     inkscape:cy="562.68106"
+     inkscape:zoom="0.82106904"
+     inkscape:cx="389.7358"
+     inkscape:cy="491.43249"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -92,19 +136,23 @@
          id="path3021"
          inkscape:connector-curvature="0" />
     </g>
-    <image
-       xlink:href="1"
-       width="619.66937"
-       height="350.01794"
-       id="image3865"
-       x="65.980492"
-       y="36.504158" />
-    <image
-       xlink:href="2"
-       width="613.46832"
-       height="346.58682"
-       id="image3876"
-       x="67.12262"
-       y="567.41565" />
+    <rect
+       style="fill:url(#pattern1840);stroke:none;stroke-width:0.965727"
+       width="606.51929"
+       height="379.46555"
+       x="72.358109"
+       y="25.344194"
+       id="rect1838"
+       ry="52.012505"
+       rx="90.333031" />
+    <rect
+       style="fill:url(#pattern2957);stroke:url(#pattern1922);stroke-width:0.968291"
+       width="604.34375"
+       height="375.30698"
+       x="72.821327"
+       y="555.82184"
+       id="rect2953"
+       ry="54.42083"
+       rx="80.997475" />
   </g>
 </svg>

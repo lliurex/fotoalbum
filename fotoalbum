@@ -12,15 +12,20 @@ mode=''
 text=''
 imgs=[]
 output_file=''
+dimensions=''
+curves=True
 
 def help(exitcode=0):
     print()
-    print(f'{os.path.basename(sys.argv[0])} -m <MODE> [-t "text or title"] file1 ... [fileN] [-o output.pdf]')
+    print(f'{os.path.basename(sys.argv[0])} -m <MODE> <PUZZLE_OPTS> [-t "text or title"] file1 ... [fileN] [-o output.pdf]')
     print(f"{os.path.basename(sys.argv[0])} -h")
     print()
     t=[]
     t='|'.join(sorted(os.listdir(f'{RESOURCE_DIR}')))
     print(f"<MODE> = [{t}]")
+    print(f"<PUZZLE_OPTS> = <DIMENSIONS> <CURVES>")
+    print(f"<DIMENSIONS> = -d WIDTHxHEIGHT ")
+    print(f"<CURVES> = -c [1|0] ")
     print()
     print('Notes:')
     print('<MODE>=minilibro allow Libreoffice\'s ODT document with 8 pages or 8 images')
@@ -29,7 +34,7 @@ def help(exitcode=0):
     sys.exit(exitcode)
 
 def parse_parameters():
-    global mode, text, imgs, output_file
+    global mode, text, imgs, output_file, dimensions, curves
     try:
         narg = 0
         while narg < len(sys.argv)-1:
@@ -44,6 +49,14 @@ def parse_parameters():
             elif param == "-t":
                 if narg+1 < len(sys.argv):
                     text = sys.argv[narg+1]
+                    narg += 1
+            elif param == "-d":
+                if narg+1 < len(sys.argv):
+                    dimensions = sys.argv[narg+1]
+                    narg += 1
+            elif param == "-c":
+                if narg+1 < len(sys.argv):
+                    curves = sys.argv[narg+1]
                     narg += 1
             elif param == "-o":
                 if narg+1 < len(sys.argv):
@@ -98,6 +111,16 @@ def replace_text(text,file):
     os.chdir(os.path.dirname(file))
     subprocess.check_call(['/usr/bin/sed','-r','-i','-e',f's|@@MMMM@@|{text}|g', file])
 
+def replace_sizes(x,y,file):
+    os.chdir(os.path.dirname(file))
+    subprocess.check_call(['/usr/bin/sed','-i','-r','-e',f's|@@ANCHO@@|{x}|g','-e',f's|@@ALTO@@|{y}|g', file])
+    pass
+
+def replace_stroke(stroke,file):
+    os.chdir(os.path.dirname(file))
+    subprocess.check_call(['/usr/bin/sed','-i','-r','-e',f's|stroke-width:0.1|stroke-width:{stroke}|g', file])
+    pass
+
 def ask(default_name):
     try:
         if default_name:
@@ -111,6 +134,19 @@ def ask(default_name):
 def ask_open(filename):
     try:
         subprocess.check_call(['/usr/bin/kdialog','--yesno',f' Open {filename} ?','--title',os.path.basename(sys.argv[0])])
+        return True
+    except:
+        return False
+
+def ask_dimensions():
+    try:
+        return subprocess.check_output(['/usr/bin/kdialog','--combobox',' Desired number of pieces ?','--title',os.path.basename(sys.argv[0]),'4x3','8x6','12x9','16x12','3x4','6x8','9x12','12x16']).decode().strip()
+    except:
+        return ''
+
+def ask_curves():
+    try:
+        name = subprocess.check_output(['/usr/bin/kdialog','--yesno',' Make curves ?','--title',os.path.basename(sys.argv[0])])
         return True
     except:
         return False
@@ -183,6 +219,31 @@ if __name__ == "__main__":
             file_template=f'{dirname}/{ngroup}/{template_name}'
             shutil.copy(f'{directory}/{template_name}',file_template)
             replace_text(text,f'{dirname}/{ngroup}/{template_name}')
+
+        if mode == 'minilibro':
+            odt_file=os.path.realpath(imgs[0])
+            if nimages == 1 and '.odt' == (odt_file[-4:]).lower():
+                os.chdir(os.path.dirname(odt_file))
+                subprocess.check_call(['/usr/bin/libreoffice','--nologo','--headless','--invisible','--print-to-file','--printer-name','PDF','--outdir',dirname,odt_file],shell=False)
+                pdf=f'{dirname}/{os.path.basename(odt_file).replace(".odt",".pdf")}'
+                os.chdir(dirname)
+                subprocess.check_call(['/usr/bin/convert','-density','150','-quality','100',pdf,f'{dirname}/a.png'])
+                imgs=[]
+                for file in sorted(os.listdir(dirname)):
+                    if file[-4:] == '.png' and file[:2] == 'a-':
+                        imgs.append(os.path.realpath(file))
+        if mode == 'puzzle':
+            if not dimensions:
+                dimensions=ask_dimensions()
+            if not curves:
+                curves=ask_curves()
+            if not dimensions:
+                sys.exit(0)
+            if curves:
+                curves='0.5'
+            else:
+                curves='0'
+            nx,ny=dimensions.split('x')
         n=0
         for img in imgs:
             n+=1
@@ -199,6 +260,13 @@ if __name__ == "__main__":
                     fix_size(newfile,'horizontal')
                 else:
                     fix_size(newfile,'vertical')
+            if mode=='puzzle':
+                x,y=image_size(newfile)
+                replace_sizes(x,y,f'{dirname}/{ngroup}/{template_name}')
+                new_template=subprocess.check_output(['python3','/usr/share/inkscape/extensions/Lasercut_jigsaw.py','-u','px','-x',str(x),'-y',str(y),'-w',nx,'-z',ny,'-k',curves,'-r','0','-i','20',f'{dirname}/{ngroup}/{template_name}'],shell=False).decode()
+                with open(f'{dirname}/{ngroup}/{template_name}','w') as fp:
+                    fp.write(new_template)
+                replace_stroke('0.5',f'{dirname}/{ngroup}/{template_name}')
 
         for ngroup in map(lambda x: x+1,range(groups)):
             file_template=f'{dirname}/{ngroup}/{template_name}'

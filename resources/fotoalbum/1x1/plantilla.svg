@@ -18,7 +18,27 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
-     id="defs4" />
+     id="defs4">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern832"
+       id="pattern1857"
+       patternTransform="matrix(0.96660455,0,0,0.96865022,25.86682,460.22383)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="1036.8"
+       height="585.6"
+       patternTransform="translate(42.645882,181.54417)"
+       id="pattern832">
+      <image
+         xlink:href="1"
+         width="1036.8"
+         height="585.59998"
+         id="image3865"
+         x="0"
+         y="0" />
+    </pattern>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -67,13 +87,15 @@
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.26497;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          ry="29.230183" />
     </g>
-    <image
-       xlink:href="1"
-       width="972"
-       height="549"
-       id="image3865"
-       x="39.980515"
-       y="478.46536" />
+    <rect
+       style="fill:url(#pattern1857);stroke:none;stroke-width:0.967627"
+       width="1002.1757"
+       height="567.24158"
+       x="25.866819"
+       y="460.22382"
+       id="rect835"
+       ry="73.153664"
+       rx="86.227119" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot2999"
