@@ -207,6 +207,8 @@ if __name__ == "__main__":
         maximages = 8
     elif mode == 'puzzle':
         maximages = 1
+    elif mode == 'mosaic':
+        maximages = 1
     groups = math.ceil(nimages/maximages)
     out_pdf=''
     out_png=''
