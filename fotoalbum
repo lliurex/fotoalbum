@@ -183,6 +183,7 @@ if __name__ == "__main__":
     if not mode or not imgs:
         print('Wrong parameters')
         help(1)
+    orig_mode=mode
     directory = f'{RESOURCE_DIR}/{mode}'
     template_name = 'plantilla.svg'
     if not os.path.isdir(directory):
@@ -244,6 +245,16 @@ if __name__ == "__main__":
             else:
                 curves='0'
             nx,ny=dimensions.split('x')
+            radius='20'
+        if mode == 'mosaic':
+            if not dimensions:
+                dimensions=ask_dimensions()
+            if not dimensions:
+                sys.exit(0)
+            curves='0'
+            nx,ny=dimensions.split('x')
+            radius='0'
+            mode = 'puzzle'
         n=0
         for img in imgs:
             n+=1
@@ -263,7 +274,7 @@ if __name__ == "__main__":
             if mode=='puzzle':
                 x,y=image_size(newfile)
                 replace_sizes(x,y,f'{dirname}/{ngroup}/{template_name}')
-                new_template=subprocess.check_output(['python3','/usr/share/inkscape/extensions/Lasercut_jigsaw.py','-u','px','-x',str(x),'-y',str(y),'-w',nx,'-z',ny,'-k',curves,'-r','0','-i','20',f'{dirname}/{ngroup}/{template_name}'],shell=False).decode()
+                new_template=subprocess.check_output(['python3','/usr/share/inkscape/extensions/Lasercut_jigsaw.py','-u','px','-x',str(x),'-y',str(y),'-w',nx,'-z',ny,'-k',curves,'-r','0','-i',radius,f'{dirname}/{ngroup}/{template_name}'],shell=False).decode()
                 with open(f'{dirname}/{ngroup}/{template_name}','w') as fp:
                     fp.write(new_template)
                 replace_stroke('0.5',f'{dirname}/{ngroup}/{template_name}')
@@ -289,7 +300,7 @@ if __name__ == "__main__":
         subprocess.check_call(cmd)
 
         if not output_file:
-            output = ask(f'{sys.argv[0]}_{mode}.pdf')
+            output = ask(f'{sys.argv[0]}_{orig_mode}.pdf')
         else:
             output = output_file
         if output:

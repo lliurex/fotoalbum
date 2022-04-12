@@ -5,7 +5,7 @@ X-KDE-Submenu=Fotoalbum
 X-KDE-Submenu[ca]=Fotoalbum
 X-KDE-MinNumbersOfUrls=1
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
-Actions=1x1;2x1;2x2;2x3;3x5;minilibro;puzzle;
+Actions=1x1;2x1;2x2;2x3;3x5;minilibro;mosaic;puzzle;
 
 [Desktop Action 1x1]
 Name=1x1 + Título
@@ -48,6 +48,13 @@ Name[es]=Minilibro plegable 8 páginas
 Name[ca]=Minillibre plegable 8 pàgines
 Icon=package-available
 Exec=/usr/bin/fotoalbum -m minilibro %U;
+
+[Desktop Action mosaic]
+Name=Mosaico
+Name[es]=Mosaico
+Name[ca]=Mosaic
+Icon=package-available
+Exec=/usr/bin/fotoalbum -m mosaic %U;
 
 [Desktop Action puzzle]
 Name=Puzle
