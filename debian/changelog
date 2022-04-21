@@ -1,3 +1,9 @@
+fotoalbum (0.2.1) focal; urgency=medium
+
+  * Fix policy
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Thu, 21 Apr 2022 12:54:45 +0200
+
 fotoalbum (0.2) focal; urgency=medium
 
   * Fix convert policy 
