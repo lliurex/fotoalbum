@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-20 12:34+0200\n"
+"PO-Revision-Date: 2022-05-20 12:45+0200\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.3\n"
+
+#: fotoalbum:59
+msgid "No mode selected"
+msgstr "No s'ha seleccionat manera"
+
+#: fotoalbum:85
+msgid "not exists"
+msgstr "no existeix"
+
+#: fotoalbum:96
+msgid "Unknown image size"
+msgstr "Grandària d'imatge desconeguda"
+
+#: fotoalbum:145
+msgid " Open {} ?"
+msgstr " Obrir {} ?"
+
+#: fotoalbum:152
+msgid " Desired number of pieces ?"
+msgstr " Nombre desitjat de peces ?"
+
+#: fotoalbum:158
+msgid " Make curves ?"
+msgstr " Utilitzar corbes ?"
+
+#: fotoalbum:165
+msgid " Name for bookmark ?"
+msgstr " Valor per a l'etiqueta ?"
+
+#: fotoalbum:193
+msgid "Wrong parameters"
+msgstr "Paràmetres incorrectes"
+
+#: fotoalbum:199
+msgid "Wrong mode"
+msgstr "Manera errònia"
+
+#: fotoalbum:202
+msgid "Template {} not found!"
+msgstr "Plantilla {} no trobada!"

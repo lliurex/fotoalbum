@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-20 12:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: fotoalbum:59
+msgid "No mode selected"
+msgstr ""
+
+#: fotoalbum:85
+msgid "not exists"
+msgstr ""
+
+#: fotoalbum:96
+msgid "Unknown image size"
+msgstr ""
+
+#: fotoalbum:145
+msgid " Open {} ?"
+msgstr ""
+
+#: fotoalbum:152
+msgid " Desired number of pieces ?"
+msgstr ""
+
+#: fotoalbum:158
+msgid " Make curves ?"
+msgstr ""
+
+#: fotoalbum:165
+msgid " Name for bookmark ?"
+msgstr ""
+
+#: fotoalbum:193
+msgid "Wrong parameters"
+msgstr ""
+
+#: fotoalbum:199
+msgid "Wrong mode"
+msgstr ""
+
+#: fotoalbum:202
+msgid "Template {} not found!"
+msgstr ""
